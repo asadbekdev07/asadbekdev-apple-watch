@@ -2,6 +2,7 @@
   --accent-color: #777777;
   --heading-color: #000000;
   --primary: #ea625c;
+  --primary-dark: #c9514c;
   --color-white: #ffffff;
 }
 /* FONT-FACE  */
@@ -68,6 +69,26 @@ img {
   margin-right: auto;
 }
 
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--color-white);
+  transition: background-color 0.4s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+.button:active {
+  opacity: 0.6;
+}
 /* MAIN-CONTENT  */
 .main-content {
   flex-grow: 1;
@@ -137,4 +158,54 @@ img {
   border:0;
   border-bottom: 1px solid #333333;
   color: #666666;
+}
+
+/* MAIN-CONTENT */
+
+/* HERO  */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #dddddd;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left calc(50% + 550px) bottom;
+}
+
+/* LEAD-CTA */
+
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+}
+.lead-cta-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  color: var(--heading-color);
+}
+.lead-cta-text {
+  padding-left: 37px;
+  border-left: 3px solid #888888;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--accent-color);
+}
+
+/* RETINA BG  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../img/intro-bg@2x.jpg");
+  }
 }
